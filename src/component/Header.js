@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Header = ()=>{
+const Header = () => {
   const links = [
     {
       text: 'Home',
@@ -12,25 +12,30 @@ const Header = ()=>{
       text: 'Greeting',
       path: '/greeting',
       id: 1,
-    }
+    },
   ];
   return (
-    <header className="flex justify-between my-4 mx-12">
-      <a href="/" className="text-2xl font-bold text-sky-500">Greetings</a>
+    <header className='flex justify-between my-4 mx-12'>
+      <a href='/' className='text-2xl font-bold text-sky-500'>
+        Greetings
+      </a>
 
       <nav>
-        <ul className="flex gap-4">
-          {
-          links.map((link) => (
+        <ul className='flex gap-4'>
+          {links.map((link) => (
             <li key={link.id}>
-              <NavLink to={link.path} className="bg-sky-500 p-2 rounded text-slate-50">{link.text}</NavLink>
+              <NavLink
+                to={link.path}
+                className='bg-sky-500 p-2 rounded text-slate-50'
+              >
+                {link.text}
+              </NavLink>
             </li>
-          ))
-        }
+          ))}
         </ul>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

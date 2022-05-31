@@ -14,7 +14,7 @@ const initialState = [];
 
 export const fetchGreetingApi = () => async (dispatch) => {
   const returnValue = await Axios.get('/v1/greetings');
-  const greeting = returnValue.data.data.greeting.message
+  const greeting = returnValue.data.data.greeting.message;
   dispatch(fetchGreeting(greeting));
 };
 
